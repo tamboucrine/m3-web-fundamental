@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="validasi_input.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-slate-100 px-4 py-10 text-slate-900">
+    <main class="mx-auto max-w-xl">
+      <header class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-pink-400">Buat akun</p>
+        <h1 class="mt-2 text-3xl font-bold">Form Registrasi</h1>
+        <p class="mt-2 text-slate-600">Lengkapi data berikut untuk melanjutkan.</p>
+      </header>
+
+      <form action="dashboard.html" novalidate class="space-y-5 rounded-lg bg-white p-6 shadow-sm sm:p-8">
+        <div>
+          <label for="username" class="mb-1.5 block text-sm font-medium">Username</label>
+          <input id="username" name="username" autocomplete="username" required minlength="3" aria-describedby="username-error" class="w-full rounded-md border border-slate-300 px-3 py-2.5 outline-none aria-[invalid=true]:border-red-600 aria-[invalid=true]:focus:border-red-600 focus:border-pink-400 focus:ring-2 focus:ring-pink-300/50 focus:shadow-lg focus:shadow-pink-200/70" />
+          <p id="username-error" class="mt-1 min-h-5 text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <label for="password" class="mb-1.5 block text-sm font-medium">Password</label>
+          <input id="password" name="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="password-error" class="w-full rounded-md border border-slate-300 px-3 py-2.5 outline-none aria-[invalid=true]:border-red-600 aria-[invalid=true]:focus:border-red-600 focus:border-pink-400 focus:ring-2 focus:ring-pink-300/50 focus:shadow-lg focus:shadow-pink-200/70" />
+          <p id="password-error" class="mt-1 min-h-5 text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <label for="nama" class="mb-1.5 block text-sm font-medium">Nama</label>
+          <input id="nama" name="nama" autocomplete="name" required aria-describedby="nama-error" class="w-full rounded-md border border-slate-300 px-3 py-2.5 outline-none aria-[invalid=true]:border-red-600 aria-[invalid=true]:focus:border-red-600 focus:border-pink-400 focus:ring-2 focus:ring-pink-300/50 focus:shadow-lg focus:shadow-pink-200/70" />
+          <p id="nama-error" class="mt-1 min-h-5 text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <label for="tanggal-lahir" class="mb-1.5 block text-sm font-medium">Tanggal lahir</label>
+          <input id="tanggal-lahir" name="tanggal_lahir" type="date" required aria-describedby="tanggal-lahir-error" class="w-full rounded-md border border-slate-300 px-3 py-2.5 outline-none aria-[invalid=true]:border-red-600 aria-[invalid=true]:focus:border-red-600 focus:border-pink-400 focus:ring-2 focus:ring-pink-300/50 focus:shadow-lg focus:shadow-pink-200/70" />
+          <p id="tanggal-lahir-error" class="mt-1 min-h-5 text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <label for="alamat" class="mb-1.5 block text-sm font-medium">Alamat</label>
+          <textarea id="alamat" name="alamat" rows="3" required aria-describedby="alamat-error" class="w-full resize-y rounded-md border border-slate-300 px-3 py-2.5 outline-none aria-[invalid=true]:border-red-600 aria-[invalid=true]:focus:border-red-600 focus:border-pink-400 focus:ring-2 focus:ring-pink-300/50 focus:shadow-lg focus:shadow-pink-200/70"></textarea>
+          <p id="alamat-error" class="mt-1 min-h-5 text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <label for="nomor-telepon" class="mb-1.5 block text-sm font-medium">Nomor telepon</label>
+          <input id="nomor-telepon" name="nomor_telepon" type="tel" autocomplete="tel" required aria-describedby="nomor-telepon-error" class="w-full rounded-md border border-slate-300 px-3 py-2.5 outline-none aria-[invalid=true]:border-red-600 aria-[invalid=true]:focus:border-red-600 focus:border-pink-400 focus:ring-2 focus:ring-pink-300/50 focus:shadow-lg focus:shadow-pink-200/70" />
+          <p id="nomor-telepon-error" class="mt-1 min-h-5 text-sm text-red-700" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="w-full rounded-md bg-pink-300 px-4 py-3 font-semibold text-rose-950 transition hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2">Daftar</button>
+      </form>
+    </main>
+  </body>
+</html>
